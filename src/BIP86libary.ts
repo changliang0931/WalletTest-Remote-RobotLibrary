@@ -6,7 +6,7 @@ import * as bitcoin from 'bitcoinjs-lib';
 bitcoin.initEccLib(ecc);
 const bip32 = BIP32Factory(ecc);
 const lib = module.exports;
-lib.deriveFromMnemonicAndPath = async function (mnemonic: string, path: string) {
+lib.BIP86DeriveFromMnemonicAndPath = async function (mnemonic: string, path: string) {
     const seed = await bip39.mnemonicToSeed(mnemonic);
     const rootKey = bip32.fromSeed(seed);
     const childNode = rootKey.derivePath(path);
@@ -16,4 +16,4 @@ lib.deriveFromMnemonicAndPath = async function (mnemonic: string, path: string) 
     });
     return { privateKey: childNode.privateKey?.toString("hex"), internalPubkey: internalPubkey?.toString("hex"), publicKey: pubkey?.toString("hex"), address: address }
 };
-lib.deriveFromMnemonicAndPath.doc = 'BIP86 Derive Account By `path` and `mnemonic`.';
+lib.BIP86DeriveFromMnemonicAndPath.doc = 'BIP86 Derive Account By `path` and `mnemonic`.';
