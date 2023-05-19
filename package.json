@@ -1,0 +1,37 @@
+{
+  "name": "wallettest-remote-robotlibrary",
+  "version": "1.0.0",
+  "description": "robot remote library",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changliang0931/WalletTest-Remote-RobotLibrary.git"
+  },
+  "keywords": [
+    "wallet",
+    "remote",
+    "robot",
+    "library"
+  ],
+  "author": "changliang0931",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/changliang0931/WalletTest-Remote-RobotLibrary/issues"
+  },
+  "homepage": "https://github.com/changliang0931/WalletTest-Remote-RobotLibrary#readme",
+  "dependencies": {
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bitcoinjs-lib": "^6.1.0",
+    "robotremote": "^1.5.1",
+    "tiny-secp256k1": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "typescript": "^5.0.4"
+  }
+}
